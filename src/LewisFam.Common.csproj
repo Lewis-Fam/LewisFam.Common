@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>LewisFam.Common</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Dev\zMe\git_LewisFam.Common\src\LewisFam.Common.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Events\**" />
+    <Compile Remove="Providers\**" />
+    <EmbeddedResource Remove="Events\**" />
+    <EmbeddedResource Remove="Providers\**" />
+    <None Remove="Events\**" />
+    <None Remove="Providers\**" />
+  </ItemGroup>
+
+   <ItemGroup>
+     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <Compile Update="Data\DataTable.cs" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <Folder Include="Operations\Request\" />
+   </ItemGroup>
+</Project>
