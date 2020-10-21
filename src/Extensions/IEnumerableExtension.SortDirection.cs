@@ -3,9 +3,10 @@
     public static partial class IEnumerableExtension
     {
         public enum SortDirection
-    {
-        Ascending,
-        Descending
-    }
+        {
+            Ascending,
+
+            Descending
+        }
     }
 }

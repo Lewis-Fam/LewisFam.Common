@@ -17,11 +17,8 @@
 
   <ItemGroup>
     <Compile Remove="Events\**" />
-    <Compile Remove="Providers\**" />
     <EmbeddedResource Remove="Events\**" />
-    <EmbeddedResource Remove="Providers\**" />
     <None Remove="Events\**" />
-    <None Remove="Providers\**" />
   </ItemGroup>
 
    <ItemGroup>

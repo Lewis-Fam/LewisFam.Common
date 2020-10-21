@@ -36,7 +36,7 @@ namespace LewisFam.Common.Config
         {
         }
 
-        protected string ExecutingAssemblyDirectory => AssemblyDirectory;
+        protected string ExecutingAssemblyDirectory => AssemblyDirectory;        
 
         private const string defaultFileName = "appconfig.json";
 

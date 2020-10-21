@@ -70,11 +70,39 @@
             <returns>A string.</returns>
             <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
         </member>
-        <member name="M:LewisFam.Common.Extensions.IEnumerableExtension.GetDynamicPropertyName(System.Object,System.String)">
+        <member name="T:LewisFam.Common.Extensions.IEnumerableExtension">
             <summary>
-            Gets the dynamic property name.
+            IEnumerable extension.
             </summary>
-            <param name="item">The item.</param>
+        </member>
+        <member name="M:LewisFam.Common.Extensions.IEnumerableExtension.Batch``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Get batches.
+            </summary>
+            <param name="items">The items.</param>
+            <param name="maxItems">The max items.</param>
+            <returns>A list of IEnumerable.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Extensions.IEnumerableExtension.GetRandomElements``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Get random elements.
+            </summary>
+            <param name="list">The list.</param>
+            <param name="elementsCount">The elements count.</param>
+            <returns>A list of TS.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Extensions.IEnumerableExtension.Sort_List``1(System.Collections.Generic.IEnumerable{``0},System.String,LewisFam.Common.Extensions.IEnumerableExtension.SortDirection)">
+            <summary>
+            Sorts the list.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="propName">The prop name.</param>
+            <param name="sortDirection">The sort direction.</param>
+            <returns>A list of TS.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Extensions.IEnumerableExtension.GetDynamicPropertyName(System.Object,System.String)">
+            <summary>Gets the dynamic property name.</summary>
+            <param name="item">    The item.</param>
             <param name="propName">The prop name.</param>
             <returns>An object.</returns>
             <exception cref="T:System.Reflection.AmbiguousMatchException">Ignore.</exception>
