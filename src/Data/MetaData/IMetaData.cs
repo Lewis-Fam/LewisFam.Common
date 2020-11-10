@@ -1,4 +1,4 @@
-﻿namespace LewisFam.Common.Data.MetaData
+﻿namespace LewisFam.Data.MetaData
 {
     public interface IMetaData<out T> where T : new()
     {

@@ -13,19 +13,56 @@
         <member name="F:LewisFam.Common.Constants.FileExtension.Jsons">
             <summary>.jsons is an internal use file extension which simply means a collection of JSON records.</summary>
         </member>
+        <member name="T:LewisFam.Common.Core.Serializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LewisFam.Common.Core.Serializer.Json``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
         <member name="M:LewisFam.Common.Util.JsonUtil.SerializeObject(System.Object,System.Boolean)">
             <summary>Serializes the object.</summary>
-            <param name="obj">   The obj.</param>
+            <param name="value">The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A string.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Util.JsonUtil.SerializeObjectAsync(System.Object,System.Boolean)">
+            <summary>Serializes the object Async.</summary>
+            <param name="value">The value.</param>
             <param name="format">If true, format.</param>
             <returns>A string.</returns>
         </member>
         <member name="M:LewisFam.Common.Util.JsonUtil.ToJson(System.Object,System.Boolean)">
             <summary>
-            Tos the json.
+            To json.
             </summary>
-            <param name="obj">The obj.</param>
+            <param name="value">The value.</param>
             <param name="format">If true, format.</param>
             <returns>A string.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Util.JsonUtil.ToJsonAsync(System.Object,System.Boolean)">
+            <summary>To JSON</summary>
+            <param name="value"> The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A json string.</returns>
+        </member>
+        <member name="M:LewisFam.Common.Util.JsonUtil.FileUtil.ReadAllJsons``1(System.String)">
+            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
+            <remarks>A text file of json object lines.</remarks>
+            <exception cref="T:System.IO.PathTooLongException"></exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+            <exception cref="T:System.IO.IOException"></exception>
+            <exception cref="T:System.UnauthorizedAccessException"></exception>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
+        </member>
+        <member name="M:LewisFam.Common.Util.JsonUtil.FileUtil.ReadAllText(System.String)">
+            <inheritdoc cref="M:System.IO.File.ReadAllText(System.String)"/>            
         </member>
         <member name="T:LewisFam.Common.Util.ObjectGeneratorUtil">
             <summary>
@@ -111,63 +148,11 @@
             <exception cref="T:System.MethodAccessException">Ignore.</exception>
             <exception cref="T:System.Reflection.TargetInvocationException">Ignore.</exception>
         </member>
-        <member name="M:LewisFam.Common.Extensions.JsonExtension.ToJson(System.Object,System.Boolean)">
-            <summary>To JSON</summary>
-            <param name="value"> The value.</param>
-            <param name="format">If true, format.</param>
-            <returns>A json string.</returns>
-        </member>
-        <member name="M:LewisFam.Common.Extensions.JsonExtension.ToJsonAsync(System.Object,System.Boolean)">
-            <summary>Tos the json async.</summary>
-            <param name="obj">   The obj.</param>
-            <param name="format">If true, format.</param>
-            <returns>A Task.</returns>
-        </member>
-        <member name="T:LewisFam.Common.Operations.IOperationResponse">
-            <summary>
-            The operation response.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse.Id">
-            <summary>
-            Gets the id.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse.IsValid">
-            <summary>
-            Gets a value indicating whether is valid.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse.MetaData">
-            <summary>
-            Gets or sets the meta data.
-            </summary>
-        </member>
-        <member name="T:LewisFam.Common.Operations.IOperationResponse`1">
-            <summary>
-            The operation response.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse`1.Id">
-            <summary>
-            Gets the id.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse`1.IsValid">
-            <summary>
-            Gets a value indicating whether is valid.
-            </summary>
-        </member>
-        <member name="P:LewisFam.Common.Operations.IOperationResponse`1.MetaData">
-            <summary>
-            Gets or sets the meta data.
-            </summary>
-        </member>
         <member name="T:LewisFam.Common.Operations.Response">
             <summary>
             Internal use only. 
             </summary>
-            <seealso cref="T:LewisFam.Common.Operations.IOperationResponse" />
+            <seealso cref="T:LewisFam.Common.Interfaces.IResponse" />
         </member>
         <member name="M:LewisFam.Common.Operations.Response.#ctor">
             <summary>
@@ -209,10 +194,8 @@
         </member>
         <member name="T:LewisFam.Common.Operations.Response`1">
             <summary>
-            
+            The response.
             </summary>
-            <typeparam name="T"></typeparam>
-            <seealso cref="!:IResponseOperation" />
         </member>
         <member name="M:LewisFam.Common.Operations.Response`1.#ctor">
             <summary>

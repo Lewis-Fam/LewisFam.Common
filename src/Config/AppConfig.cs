@@ -1,4 +1,5 @@
-﻿using LewisFam.Common.Extensions;
+﻿using LewisFam.Common.Util;
+
 using System;
 using System.IO;
 using System.Reflection;
@@ -32,13 +33,13 @@ namespace LewisFam.Common.Config
             return this?.ToJson();
         }
 
-        protected AppConfig()
+        public AppConfig()
         {
         }
 
-        protected string ExecutingAssemblyDirectory => AssemblyDirectory;        
+        protected virtual string ExecutingAssemblyDirectory => AssemblyDirectory;
 
-        private const string defaultFileName = "appconfig.json";
+        //private const string defaultFileName = "appconfig.json";
 
         private string AssemblyDirectory
         {

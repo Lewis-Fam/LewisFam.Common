@@ -1,5 +1,10 @@
 ﻿namespace LewisFam.Common.Constants
 {
+    public static class Header
+    {
+        public const string ContentType = "Content-Type";
+    }
+
     public static class MIME
     {
         public static class Application
@@ -61,7 +66,7 @@
             public const string Png = "image/png";
             public const string SvgXml = "image/svg+xml";
             public const string Tiff = "image/tiff";
-            public const string Webp = "image/webp";
+            public const string Webp = "image/webp";            
         }
 
         public static class Text

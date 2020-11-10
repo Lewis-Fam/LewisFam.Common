@@ -1,19 +1,22 @@
 ﻿using LewisFam.Common.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LewisFam.Common.Operations
 {
     /// <summary>
     /// Internal use only. 
     /// </summary>
-    /// <seealso cref="IOperationResponse" />
-    public abstract class Response : IOperationResponse
+    /// <seealso cref="IResponse" />
+    public abstract class Response : IResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Response"/> class.
         /// </summary>
-        protected Response() : this(Guid.Empty)
+        public Response()
         {
+            //Id = Guid.Empty;
         }
 
         /// <summary>
@@ -31,7 +34,7 @@ namespace LewisFam.Common.Operations
         /// <value>
         /// The identifier.
         /// </value>
-        public Guid Id { get; protected set; }
+        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// Returns true if MetaData is valid.
@@ -44,7 +47,7 @@ namespace LewisFam.Common.Operations
         /// <summary>
         /// Meta Data
         /// </summary>
-        public virtual object MetaData { get; set; }
+        protected virtual object[] MetaData { get; set; }
 
         /// <summary>
         /// Sets the identifier.
@@ -57,17 +60,16 @@ namespace LewisFam.Common.Operations
     }
 
 
+
     /// <summary>
-    /// 
+    /// The response.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <seealso cref="IResponseOperation" />
-    public class Response<T> : Response, IOperationResponse<T>
+    public abstract class Response<T> : Response, IResponse<T> where T : new()
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Response{T}"/> class.
         /// </summary>
-        protected Response() : base()
+        public Response() : base()
         {   
         }
 
@@ -86,11 +88,16 @@ namespace LewisFam.Common.Operations
         /// <value>
         ///   <c>true</c> if this instance is valid; otherwise, <c>false</c>.
         /// </value>
-        public new virtual bool IsValid => MetaData != null;
+        public new virtual bool IsValid => MetaData != null && MetaData.Any();
+
+        //T[] IResponse<T>.MetaData { get; }
 
         /// <summary>
         /// Meta Data
         /// </summary>
-        public new T MetaData { get; set; }        
+        //public override T[] MetaData { get; set; }
+
+        //T IResponse<T>.MetaData => throw new NotImplementedException();
+        public new virtual T[] MetaData { get; set; }
     }
 }

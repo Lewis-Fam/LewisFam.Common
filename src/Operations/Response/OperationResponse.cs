@@ -1,8 +1,9 @@
-﻿using System;
+﻿using LewisFam.Common.Interfaces;
+using System;
 
 namespace LewisFam.Common.Operations
 {
-    public class OperationResponse : Response, IOperationResponse
+    public class OperationResponse : Response, IResponse
     {
         public OperationResponse() : base()
         {
@@ -13,7 +14,7 @@ namespace LewisFam.Common.Operations
         }
     }
 
-    public class OperationResponse<T> : Response<T>, IOperationResponse<T>
+    public class OperationResponse<T> : Response<T>, IResponse<T> where T : new()
     {
         public OperationResponse() : base()
         {

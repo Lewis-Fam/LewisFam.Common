@@ -4,8 +4,14 @@ using System.Linq;
 
 namespace LewisFam.Common.Util
 {
-    public class EnumUtil
+    public static class EnumUtil
     {
+        //Move to Extensions namespace...?
+        public static T ToEnum<T>(this string value, bool ignoreCase = true)
+        {
+            return (T)Enum.Parse(typeof(T), value, ignoreCase);
+        }
+
         public static IEnumerable<T> GetValues<T>()
         {
             return Enum.GetValues(typeof(T)).Cast<T>();
