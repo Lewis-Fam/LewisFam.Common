@@ -25,16 +25,15 @@ namespace LewisFam.Common.Util
 
         #endregion Xml
 
-        public static T DeserializeObject<T>(string json) => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings);
+        public static T DeserializeObject<T>(this string json) => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings);
 
-        public static Task<T> DeserializeObjectAsync<T>(string json) => Task.Run(() => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings));
+        public static Task<T> DeserializeObjectAsync<T>(this string json) => Task.Run(() => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings));
 
         [Obsolete("Method will be removed in future release. Please use the new DeserializeObject method.")]
         public static T FromJson<T>(string json) => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings);
 
         [Obsolete("Method will be removed in future release. Please use the new DeserializeObjectAsync method.")]           
         public static Task<T> FromJsonAsync<T>(string json) => Task.Run(() => JsonConvert.DeserializeObject<T>(json, SerializerSettings.Settings));
-
 
         
 

@@ -4,6 +4,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>LewisFam.Common</RootNamespace>
     <LangVersion>8.0</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>2020, utilities, utils, helper, helpers, common, shared, extension, api, json, newtonsoft.json, c#, csharp, free, MIT, lewisfam, lewisfam.network</PackageTags>
+    <PackageLicenseFile>License.md</PackageLicenseFile>
+    <AssemblyVersion>1.0.5.1</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
+    <Version>1.0.5</Version>
+    <Authors>LewisFam</Authors>
+    <Description>A simple C# common library. Free and open source.</Description>
+    <RepositoryUrl>https://github.com/Lewis-Fam/LewisFam.Common</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -19,6 +28,10 @@
     <Compile Remove="Events\**" />
     <EmbeddedResource Remove="Events\**" />
     <None Remove="Events\**" />
+    <None Include="..\License.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
    <ItemGroup>

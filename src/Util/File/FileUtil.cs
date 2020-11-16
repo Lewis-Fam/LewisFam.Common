@@ -81,6 +81,16 @@ namespace LewisFam.Common.Util
             return System.Text.Encoding.UTF8.GetString(result);
         }
 
+        public static void AppendAllLines(string path, IEnumerable<string> tmp)
+        {
+            File.AppendAllLines(path, tmp);
+        }
+
+        public static async Task AppendAllLinesAsync(string path, IEnumerable<string> tmp)
+        {
+            await File.AppendAllLinesAsync(path, tmp);
+        }
+
         public static void WriteAllText(string path, string contents)
         {
             File.WriteAllText(path, contents);
