@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LewisFam.Common</name>
+    </assembly>
+    <members>
+        <member name="T:LewisFam.Core.Serializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LewisFam.Core.Serializer.Json``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:LewisFam.Extensions.EncryptionExtension.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypts the.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="key">The key.</param>
+            <returns>A string.</returns>
+            <exception cref="T:System.RankException">Ignore.</exception>
+            <exception cref="T:System.ArrayTypeMismatchException">Ignore.</exception>
+            <exception cref="T:System.InvalidCastException">Ignore.</exception>
+            <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
+            <exception cref="T:System.IO.IOException">Ignore.</exception>
+        </member>
+        <member name="M:LewisFam.Extensions.EncryptionExtension.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypts
+            </summary>
+            <param name="encryptedText">The encrypted text.</param>
+            <param name="key">The key.</param>
+            <returns>A string.</returns>
+            <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
+        </member>
+        <member name="M:LewisFam.Http.HttpClient.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="P:LewisFam.ILewisFamObject.IsDisposed">
+            <summary>
+            Gets a value indicating whether this instance has been disposed.
+            </summary>
+            <returns>true if this instance has been disposed; otherwise, false.</returns>
+        </member>
+        <member name="P:LewisFam.ILewisFamObject.IsEnableDispose">
+            <summary>
+            Gets a value indicating whether this instance is disposable.
+            </summary>
+            <returns>true if this instance is disposable; otherwise, false.</returns>       
+        </member>
+        <member name="P:LewisFam.ILewisFamObject.NativePtr">
+            <summary>
+            Gets a pointer of native structure.
+            </summary>>
+        </member>
+        <member name="M:LewisFam.ILewisFamObject.ThrowIfDisposed">
+            <summary>
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException"></exception>
+        </member>
+        <member name="M:LewisFam.ILewisFamObject.ThrowIfDisposed(System.String)">
+            <summary>
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException"></exception>
+        </member>
+        <member name="M:LewisFam.Interfaces.IConsole.WriteLine(System.String)">
+            <summary>
+            Write a line of text to the console window
+            </summary>
+            <param name="line">Text to be output</param>
+        </member>
+        <member name="M:LewisFam.Interfaces.IConsole.Write(System.String)">
+            <summary>
+            Write text to the console window
+            </summary>
+            <param name="line">Text to be written</param>
+        </member>
+        <member name="M:LewisFam.Interfaces.IConsole.Clear">
+            <summary>
+            Clear the console window from any text.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Interfaces.IConsole.RunScript(System.String,System.String)">
+            <summary>
+            Load,compile and run a script by calling its main function with the provided arguments
+            Errors are outputed to the console window.
+            The function will return when the script has finished execution.
+            </summary>
+            <param name="script">Path to the script that will be run</param>
+            <param name="arguments">Arguments to pass to the script</param>
+        </member>
+        <member name="M:LewisFam.Interfaces.IConsole.RunScript(System.String)">
+            <summary>
+            Run a script without extra arguments. Errors are outputted to the console window.
+            </summary>
+            <param name="script">Path to the script to be run.</param>
+        </member>
+        <member name="T:LewisFam.Interfaces.IUtilities">
+            <summary>
+             Exposed utilities 
+            </summary>
+        </member>
+        <member name="T:LewisFam.LewisFamObject">
+            <summary>
+            The LewisFamObject base class.
+            </summary>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LewisFam.LewisFamObject"/> class with the specified value indicating whether this instance is disposable.
+            </summary>
+            <param name="isEnabledDispose">true if this instance is disposable; otherwise, false.</param>
+        </member>
+        <member name="P:LewisFam.LewisFamObject.IsDisposed">
+            <summary>
+            Gets a value indicating whether this instance has been disposed.
+            </summary>
+            <returns>true if this instance has been disposed; otherwise, false.</returns>
+        </member>
+        <member name="P:LewisFam.LewisFamObject.IsEnableDispose">
+            <summary>
+            Gets a value indicating whether this instance is disposable.
+            </summary>
+            <returns>true if this instance is disposable; otherwise, false.</returns>
+        </member>
+        <member name="P:LewisFam.LewisFamObject.NativePtr">
+            <summary>
+            Gets a pointer of native structure.
+            </summary>>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.ThrowIfDisposed">
+            <summary>
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException"></exception>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.ThrowIfDisposed(System.String)">
+            <summary>
+            ThrowIfDisposed
+            </summary>
+            <param name="objectName"></param>
+            <exception cref="T:System.ObjectDisposedException"></exception>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.DisposeManaged">
+            <summary>
+            Releases all managed resources.
+            </summary>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.DisposeUnmanaged">
+            <summary>
+            Releases all unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.Dispose">
+            <summary>
+            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject"/>.
+            </summary>
+        </member>
+        <member name="M:LewisFam.LewisFamObject.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject"/>.
+            </summary>
+            <param name="disposing">Indicate value whether <see cref="M:System.IDisposable.Dispose"/> method was called.</param>
+        </member>
+        <member name="T:LewisFam.Models.BindableObject">
+            <summary>Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> to simplify model binding.</summary>
+        </member>
+        <member name="E:LewisFam.Models.BindableObject.PropertyChanged">
+            <summary>Occurs when a property value changes.</summary>
+        </member>
+        <member name="M:LewisFam.Models.BindableObject.RaisePropertyChanged(System.String)">
+            <summary>Raises this object's PropertyChanged event.</summary>
+            <param name="propertyName">
+            Name of the property used to notify listeners. This value is optional and can be provided automatically when invoked from compilers that support <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute"/>.
+            </param>
+        </member>
+        <member name="M:LewisFam.Models.BindableObject.RaisePropertyChanged(System.String[])">
+            <summary>Raises this object's PropertyChanged event for each of the properties.</summary>
+            <param name="propertyNames">The properties that have a new value.</param>
+        </member>
+        <member name="M:LewisFam.Models.BindableObject.SetProperty``1(``0@,``0,System.String)">
+            <summary>Checks if a property already matches a desired value. Sets the property and notifies listeners only when necessary.</summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">     Reference to a property with both getter and setter.</param>
+            <param name="value">       Desired value for the property.</param>
+            <param name="propertyName">
+            Name of the property used to notify listeners. This value is optional and can be provided automatically when invoked from compilers that support CallerMemberName.
+            </param>
+            <returns>True if the value was changed, false if the existing value matched the desired value.</returns>
+        </member>
+        <member name="M:LewisFam.Models.BindableObject.SetProperty``1(``0@,``0,System.Action,System.String)">
+            <summary>Checks if a property already matches a desired value. Sets the property and notifies listeners only when necessary.</summary>
+            <typeparam name="T">Type of the property.</typeparam>
+            <param name="storage">     Reference to a property with both getter and setter.</param>
+            <param name="value">       Desired value for the property.</param>
+            <param name="propertyName">
+            Name of the property used to notify listeners. This value is optional and can be provided automatically when invoked from compilers that support CallerMemberName.
+            </param>
+            <param name="onChanged">   Action that is called after the property value has been changed.</param>
+            <returns>True if the value was changed, false if the existing value matched the desired value.</returns>
+        </member>
+        <member name="T:LewisFam.Operations.Response.Response">
+            <summary>
+            Internal use only. 
+            </summary>
+            <seealso cref="T:LewisFam.Interfaces.IResponse" />
+        </member>
+        <member name="M:LewisFam.Operations.Response.Response.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response"/> class.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Operations.Response.Response.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:LewisFam.Operations.Response.Response.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:LewisFam.Operations.Response.Response.IsValid">
+            <summary>
+            Returns true if MetaData is valid.
+            </summary>
+            <value>
+              <c>true</c> if this instance is valid; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:LewisFam.Operations.Response.Response.MetaData">
+            <summary>
+            Meta Data
+            </summary>
+        </member>
+        <member name="M:LewisFam.Operations.Response.Response.SetId(System.Guid)">
+            <summary>
+            Sets the identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="T:LewisFam.Operations.Response.Response`1">
+            <summary>
+            The response.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Operations.Response.Response`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1"/> class.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Operations.Response.Response`1.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:LewisFam.Operations.Response.Response`1.IsValid">
+            <summary>
+            Returns true if MetaData is valid.
+            </summary>
+            <value>
+              <c>true</c> if this instance is valid; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:LewisFam.Operations.Response.Response`1.MetaData">
+            <summary>
+            Meta Data
+            </summary>
+        </member>
+        <member name="M:LewisFam.Utils.File.FileUtil.Reader.ReadFileLines(System.String)">
+            <summary>
+            ReadFileLines
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+            <exception cref="T:System.IO.IOException"></exception>
+            <exception cref="T:System.ObjectDisposedException"></exception>
+            <exception cref="T:System.UnauthorizedAccessException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
+        </member>
+        <member name="T:LewisFam.Utils.Json.JsonUtil">
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+            <summary>
+            A Newtonsoft.Json helper utility.
+            </summary>
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+        </member>
+        <member name="T:LewisFam.Utils.Json.JsonUtil.SerializerSettings">
+            <summary>
+            The serializer settings.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObjectAsync``1(System.String)">
+            <summary>
+            Deserializes the object async.
+            </summary>
+            <param name="json">The json string.</param>
+            <returns>T</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.FromJsonAsync``1(System.String)">
+            <summary>
+            Deserializes the object async.
+            </summary>
+            <param name="json">The json string.</param>
+            <returns>A Task.</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.SerializeObjectToJsonAsync(System.Object,System.Boolean)">
+            <summary>Serializes the object Async.</summary>
+            <param name="value">The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A string.</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.ToJsonAsync(System.Object,System.Boolean)">
+            <summary>To JSON</summary>
+            <param name="value"> The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A json string.</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.Object)">
+            <summary>
+            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="jsonObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.String)">
+            <summary>
+            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/>
+            </summary>
+            <param name="json">The json.</param>
+            <returns>A T.</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.SerializeObjectToJson(System.Object,System.Boolean)">
+            <summary>Serializes the object.</summary>
+            <param name="value">The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A string.</returns>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.ToJson(System.Object,System.Boolean)">
+            <summary>
+            To json.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="format">If true, format.</param>
+            <returns>A string.</returns>
+        </member>
+        <member name="T:LewisFam.Utils.Json.JsonUtil.FileUtil">
+            <summary>
+            A Json file helper utility.
+            </summary>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllJsons``1(System.String)">
+            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
+            <remarks>A text file of json object lines.</remarks>
+            <exception cref="T:System.IO.PathTooLongException"></exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+            <exception cref="T:System.IO.IOException"></exception>
+            <exception cref="T:System.UnauthorizedAccessException"></exception>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
+        </member>
+        <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllText(System.String)">
+            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
+            <exception cref="T:System.IO.PathTooLongException"></exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
+            <exception cref="T:System.IO.IOException"></exception>
+            <exception cref="T:System.UnauthorizedAccessException"></exception>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Csv">
+            <summary>
+            .csv
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Json">
+            <summary>
+            .json
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Jsons">
+            <summary>
+            .jsons
+            </summary>
+            <remarks>.jsons is an custom file extension which simply represents a collection of valid JSON objects.</remarks>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Tmp">
+            <summary>
+            .tmp
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Txt">
+            <summary>
+            .txt
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Html">
+            <summary>
+            .html
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Dat">
+            <summary>
+            .dat
+            </summary>
+        </member>
+        <member name="F:LewisFam.Well_Known.FileExtension.Zip">
+            <summary>
+            .zip
+            </summary>
+        </member>
+    </members>
+</doc>
