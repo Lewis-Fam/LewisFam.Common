@@ -32,11 +32,6 @@ namespace LewisFam
         /// If this object is disposed, then <see cref="System.ObjectDisposedException"/> is thrown.
         /// </summary>
         /// <exception cref="ObjectDisposedException"></exception>
-        void ThrowIfDisposed(string objectName);
-
-        /// <summary>
-        /// Releases all resources used by this <see cref="LewisFamObject"/>.
-        /// </summary>
-        void Dispose();
+        void ThrowIfDisposed(string objectName);          
     }
 }
