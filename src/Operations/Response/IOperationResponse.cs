@@ -1,4 +1,8 @@
-﻿
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
 //using LewisFam.Common.Interfaces;
 //using System;
 //using System.Collections.Generic;

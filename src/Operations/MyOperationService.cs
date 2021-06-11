@@ -1,4 +1,9 @@
-﻿//namespace LewisFam.Common.Operations
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+//namespace LewisFam.Common.Operations
 //{
 //    internal class MyOperationService
 //    {
@@ -14,19 +19,12 @@
 //            SingletonInstanceOperation = instanceOperation;
 //        }
 
-//        public IMyOperationTransient TransientOperation { get; }
-//        public IMyOperationScoped ScopedOperation { get; }
-//        public IMyOperationSingleton SingletonOperation { get; }
-//        public IMyOperationSingletonInstance SingletonInstanceOperation { get; }
-//    }
+// public IMyOperationTransient TransientOperation { get; } public IMyOperationScoped ScopedOperation { get; } public IMyOperationSingleton SingletonOperation { get; } public
+// IMyOperationSingletonInstance SingletonInstanceOperation { get; } }
 
-//    //class SomeService
-//    //{
-//    //}
+// //class SomeService //{ //}
 
-//    //public class Service1 : IDisposable { }
-//    //public class Service2 : IDisposable { }
-//    //public class Service3 : IDisposable { }
+// //public class Service1 : IDisposable { } //public class Service2 : IDisposable { } //public class Service3 : IDisposable { }
 
 //    //public interface ISomeService { }
 //    //public class SomeServiceImplementation : ISomeService, IDisposable { }

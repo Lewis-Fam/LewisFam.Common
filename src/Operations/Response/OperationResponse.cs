@@ -1,4 +1,10 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
+
 using LewisFam.Interfaces;
 
 namespace LewisFam.Operations.Response

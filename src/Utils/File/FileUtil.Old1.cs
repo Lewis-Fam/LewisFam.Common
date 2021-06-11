@@ -1,4 +1,9 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -12,6 +17,6 @@ namespace LewisFam.Utils.File
             UriBuilder uri = new UriBuilder(codeBase);
             string path = Uri.UnescapeDataString(uri.Path);
             return Path.GetDirectoryName(path);
-        }                                
+        }
     }
 }

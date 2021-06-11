@@ -1,8 +1,14 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+
 using LewisFam.Utils.Json;
 
 namespace LewisFam.Utils.File
@@ -52,8 +58,6 @@ namespace LewisFam.Utils.File
         }
     }
 
-    
-
     public class FileHelperUtil : FileUtilBase
     {
         public FileHelperUtil(string filename) : base(filename)
@@ -63,8 +67,6 @@ namespace LewisFam.Utils.File
 
     public abstract class FileUtilBase
     {
-        public FileInfo FileInfo { get; protected set; }
-
         protected FileUtilBase()
         {
         }
@@ -73,10 +75,16 @@ namespace LewisFam.Utils.File
         {
             FileInfo = new FileInfo(filename);
         }
+
+        public FileInfo FileInfo { get; protected set; }
     }
 
     public class FileWatcherUtil
     {
+        private static string _path;
+
+        private FileSystemWatcher _fileSystemWatcher;
+
         public FileWatcherUtil()
         {
             _path = "logs";
@@ -103,10 +111,6 @@ namespace LewisFam.Utils.File
                 }
             }
         }
-
-        private static string _path;
-
-        private FileSystemWatcher _fileSystemWatcher;
 
         private static void FileWatcher_IsChanged(object sender, FileSystemEventArgs e)
         {

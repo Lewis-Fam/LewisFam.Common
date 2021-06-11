@@ -1,19 +1,19 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
 using System.Diagnostics;
 
 namespace LewisFam
 {
-
-    /// <summary>
-    /// The LewisFamObject base class.
-    /// </summary>
+    /// <summary>The LewisFamObject base class.</summary>
     public abstract class LewisFamObject : ILewisFamObject
     {
         #region Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LewisFamObject"/> class with the specified value indicating whether this instance is disposable.
-        /// </summary>
+        /// <summary>Initializes a new instance of the <see cref="LewisFamObject"/> class with the specified value indicating whether this instance is disposable.</summary>
         /// <param name="isEnabledDispose">true if this instance is disposable; otherwise, false.</param>
         protected LewisFamObject(bool isEnabledDispose = true)
         {
@@ -21,13 +21,11 @@ namespace LewisFam
             IsEnableDispose = isEnabledDispose;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Properties
 
-        /// <summary>
-        /// Gets a value indicating whether this instance has been disposed.
-        /// </summary>
+        /// <summary>Gets a value indicating whether this instance has been disposed.</summary>
         /// <returns>true if this instance has been disposed; otherwise, false.</returns>
         public bool IsDisposed
         {
@@ -35,31 +33,26 @@ namespace LewisFam
             private set;
         }
 
-        /// <summary>
-        /// Gets a value indicating whether this instance is disposable.
-        /// </summary>
+        /// <summary>Gets a value indicating whether this instance is disposable.</summary>
         /// <returns>true if this instance is disposable; otherwise, false.</returns>
         public bool IsEnableDispose
         {
             get;
         }
 
-        /// <summary>
-        /// Gets a pointer of native structure.
-        /// </summary>>
+        /// <summary>Gets a pointer of native structure.</summary>
+        /// &gt;
         public IntPtr NativePtr
         {
             get;
             private set;
         }
 
-        #endregion
+        #endregion Properties
 
         #region Methods
 
-        /// <summary>
-        /// If this object is disposed, then <see cref="System.ObjectDisposedException"/> is thrown.
-        /// </summary>
+        /// <summary>If this object is disposed, then <see cref="System.ObjectDisposedException"/> is thrown.</summary>
         /// <exception cref="ObjectDisposedException"></exception>
         public void ThrowIfDisposed()
         {
@@ -67,9 +60,7 @@ namespace LewisFam
                 throw new ObjectDisposedException(GetType().FullName);
         }
 
-        /// <summary>
-        /// ThrowIfDisposed
-        /// </summary>
+        /// <summary>ThrowIfDisposed</summary>
         /// <param name="objectName"></param>
         /// <exception cref="ObjectDisposedException"></exception>
         public void ThrowIfDisposed(string objectName)
@@ -80,17 +71,13 @@ namespace LewisFam
 
         #region Overrides
 
-        private bool Equals(ILewisFamObject other)
-        {
-            return NativePtr.Equals(other.NativePtr);
-        }
-
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != GetType()) return false;
-            return Equals((ILewisFamObject) obj);
+            return Equals((ILewisFamObject)obj);
+
             //return Equals((LewisFamObject) obj);
         }
 
@@ -99,10 +86,13 @@ namespace LewisFam
             return NativePtr.GetHashCode();
         }
 
-        /// <summary>
-        /// Releases all managed resources.
-        /// </summary>
+        /// <summary>Releases all managed resources.</summary>
         protected virtual void DisposeManaged()
+        {
+        }
+
+        /// <summary>Releases all unmanaged resources.</summary>
+        protected virtual void DisposeUnmanaged()
         {
         }
 
@@ -110,35 +100,29 @@ namespace LewisFam
         {
         }
 
-        /// <summary>
-        /// Releases all unmanaged resources.
-        /// </summary>
-        protected virtual void DisposeUnmanaged()
-        {
-        }
-
         protected virtual void DisposingUnmanaged()
         {
         }
 
-        #endregion
+        private bool Equals(ILewisFamObject other)
+        {
+            return NativePtr.Equals(other.NativePtr);
+        }
 
-        #endregion
+        #endregion Overrides
+
+        #endregion Methods
 
         #region IDisposable Members
 
-        /// <summary>
-        /// Releases all resources used by this <see cref="LewisFamObject"/>.
-        /// </summary>
+        /// <summary>Releases all resources used by this <see cref="LewisFamObject"/>.</summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        /// <summary>
-        /// Releases all resources used by this <see cref="LewisFamObject"/>.
-        /// </summary>
+        /// <summary>Releases all resources used by this <see cref="LewisFamObject"/>.</summary>
         /// <param name="disposing">Indicate value whether <see cref="IDisposable.Dispose"/> method was called.</param>
         private void Dispose(bool disposing)
         {
@@ -173,7 +157,6 @@ namespace LewisFam
             NativePtr = IntPtr.Zero;
         }
 
-        #endregion
-
+        #endregion IDisposable Members
     }
 }

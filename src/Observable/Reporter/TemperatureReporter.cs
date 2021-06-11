@@ -1,22 +1,19 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
 
 namespace LewisFam.Observable.Reporter
 {
     public class TemperatureReporter : IObserver<Temperature>
     {
-        private IDisposable unsubscriber;
         private bool first = true;
+
         private Temperature last;
 
-        public virtual void Subscribe(IObservable<Temperature> provider)
-        {
-            unsubscriber = provider.Subscribe(this);
-        }
-
-        public virtual void Unsubscribe()
-        {
-            unsubscriber.Dispose();
-        }
+        private IDisposable unsubscriber;
 
         public virtual void OnCompleted()
         {
@@ -41,6 +38,16 @@ namespace LewisFam.Observable.Reporter
                 Console.WriteLine("   Change: {0}° in {1:g}", value.Degrees - last.Degrees,
                     value.Date.ToUniversalTime() - last.Date.ToUniversalTime());
             }
+        }
+
+        public virtual void Subscribe(IObservable<Temperature> provider)
+        {
+            unsubscriber = provider.Subscribe(this);
+        }
+
+        public virtual void Unsubscribe()
+        {
+            unsubscriber.Dispose();
         }
     }
 }

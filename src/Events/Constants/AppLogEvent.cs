@@ -1,4 +1,9 @@
-﻿namespace LewisFam.Events.Constants
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+namespace LewisFam.Events.Constants
 {
     public static partial class AppLogEvent
     {
@@ -16,6 +21,8 @@
 
         public const int Fatal = 666;
 
+        public const int MethodTrace = 9990;
+
         public const int OperationBegin = 1000;
 
         public const int OperationCompleted = 2000;
@@ -27,7 +34,6 @@
         public const int ReadNotFound = 4000;
 
         public const int Trace = 9999;
-        public const int MethodTrace = 9990;
 
         public const int Update = 1002;
 

@@ -5,14 +5,10 @@
     </assembly>
     <members>
         <member name="T:LewisFam.Core.Serializer">
-            <summary>
-            
-            </summary>
+            <summary></summary>
         </member>
         <member name="M:LewisFam.Core.Serializer.Json``1">
-            <summary>
-            
-            </summary>
+            <summary></summary>
             <typeparam name="T"></typeparam>
             <returns></returns>
         </member>
@@ -38,8 +34,22 @@
             <returns>A string.</returns>
             <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
         </member>
+        <member name="M:LewisFam.Extensions.IEnumerableExtension.OrderBy``1(System.Collections.Generic.IEnumerable{``0},System.String,LewisFam.Extensions.IEnumerableExtension.SortDirection)">
+            <summary>
+            Orders the by.
+            </summary>
+            <param name="enumerable">The enumerable.</param>
+            <param name="property">The property.</param>
+            <param name="sortDirection">The sort direction.</param>
+            <returns>A list of TS.</returns>
+        </member>
         <member name="M:LewisFam.Http.HttpClient.Dispose(System.Boolean)">
-            <inheritdoc/>
+            <inheritdoc />
+        </member>
+        <member name="T:LewisFam.ILewisFamObject">
+            <summary>
+            The lewis fam object.
+            </summary>
         </member>
         <member name="P:LewisFam.ILewisFamObject.IsDisposed">
             <summary>
@@ -51,7 +61,7 @@
             <summary>
             Gets a value indicating whether this instance is disposable.
             </summary>
-            <returns>true if this instance is disposable; otherwise, false.</returns>       
+            <returns>true if this instance is disposable; otherwise, false.</returns>
         </member>
         <member name="P:LewisFam.ILewisFamObject.NativePtr">
             <summary>
@@ -60,13 +70,13 @@
         </member>
         <member name="M:LewisFam.ILewisFamObject.ThrowIfDisposed">
             <summary>
-            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException" /> is thrown.
             </summary>
             <exception cref="T:System.ObjectDisposedException"></exception>
         </member>
         <member name="M:LewisFam.ILewisFamObject.ThrowIfDisposed(System.String)">
             <summary>
-            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException" /> is thrown.
             </summary>
             <exception cref="T:System.ObjectDisposedException"></exception>
         </member>
@@ -104,7 +114,7 @@
         </member>
         <member name="T:LewisFam.Interfaces.IUtilities">
             <summary>
-             Exposed utilities 
+             Exposed utilities
             </summary>
         </member>
         <member name="T:LewisFam.LewisFamObject">
@@ -114,7 +124,7 @@
         </member>
         <member name="M:LewisFam.LewisFamObject.#ctor(System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:LewisFam.LewisFamObject"/> class with the specified value indicating whether this instance is disposable.
+            Initializes a new instance of the <see cref="T:LewisFam.LewisFamObject" /> class with the specified value indicating whether this instance is disposable.
             </summary>
             <param name="isEnabledDispose">true if this instance is disposable; otherwise, false.</param>
         </member>
@@ -137,7 +147,7 @@
         </member>
         <member name="M:LewisFam.LewisFamObject.ThrowIfDisposed">
             <summary>
-            If this object is disposed, then <see cref="T:System.ObjectDisposedException"/> is thrown.
+            If this object is disposed, then <see cref="T:System.ObjectDisposedException" /> is thrown.
             </summary>
             <exception cref="T:System.ObjectDisposedException"></exception>
         </member>
@@ -160,17 +170,17 @@
         </member>
         <member name="M:LewisFam.LewisFamObject.Dispose">
             <summary>
-            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject"/>.
+            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject" />.
             </summary>
         </member>
         <member name="M:LewisFam.LewisFamObject.Dispose(System.Boolean)">
             <summary>
-            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject"/>.
+            Releases all resources used by this <see cref="T:LewisFam.LewisFamObject" />.
             </summary>
-            <param name="disposing">Indicate value whether <see cref="M:System.IDisposable.Dispose"/> method was called.</param>
+            <param name="disposing">Indicate value whether <see cref="M:System.IDisposable.Dispose" /> method was called.</param>
         </member>
         <member name="T:LewisFam.Models.BindableObject">
-            <summary>Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> to simplify model binding.</summary>
+            <summary>Implementation of <see cref="T:System.ComponentModel.INotifyPropertyChanged" /> to simplify model binding.</summary>
         </member>
         <member name="E:LewisFam.Models.BindableObject.PropertyChanged">
             <summary>Occurs when a property value changes.</summary>
@@ -178,7 +188,7 @@
         <member name="M:LewisFam.Models.BindableObject.RaisePropertyChanged(System.String)">
             <summary>Raises this object's PropertyChanged event.</summary>
             <param name="propertyName">
-            Name of the property used to notify listeners. This value is optional and can be provided automatically when invoked from compilers that support <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute"/>.
+            Name of the property used to notify listeners. This value is optional and can be provided automatically when invoked from compilers that support <see cref="T:System.Runtime.CompilerServices.CallerMemberNameAttribute" />.
             </param>
         </member>
         <member name="M:LewisFam.Models.BindableObject.RaisePropertyChanged(System.String[])">
@@ -208,18 +218,18 @@
         </member>
         <member name="T:LewisFam.Operations.Response.Response">
             <summary>
-            Internal use only. 
+            Internal use only.
             </summary>
             <seealso cref="T:LewisFam.Interfaces.IResponse" />
         </member>
         <member name="M:LewisFam.Operations.Response.Response.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response"/> class.
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response" /> class.
             </summary>
         </member>
         <member name="M:LewisFam.Operations.Response.Response.#ctor(System.Guid)">
             <summary>
-            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response"/> class.
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response" /> class.
             </summary>
             <param name="id">The identifier.</param>
         </member>
@@ -257,12 +267,12 @@
         </member>
         <member name="M:LewisFam.Operations.Response.Response`1.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1"/> class.
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1" /> class.
             </summary>
         </member>
         <member name="M:LewisFam.Operations.Response.Response`1.#ctor(System.Guid)">
             <summary>
-            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1"/> class.
+            Initializes a new instance of the <see cref="T:LewisFam.Operations.Response.Response`1" /> class.
             </summary>
             <param name="id">The identifier.</param>
         </member>
@@ -291,12 +301,12 @@
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
         <member name="T:LewisFam.Utils.Json.JsonUtil">
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil" />
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil" />
             <summary>
             A Newtonsoft.Json helper utility.
             </summary>
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil" />
         </member>
         <member name="T:LewisFam.Utils.Json.JsonUtil.SerializerSettings">
             <summary>
@@ -331,7 +341,7 @@
         </member>
         <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.Object)">
             <summary>
-            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/>
+            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings" />
             </summary>
             <typeparam name="T"></typeparam>
             <param name="jsonObj"></param>
@@ -339,7 +349,7 @@
         </member>
         <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.String)">
             <summary>
-            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/>
+            Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings" />
             </summary>
             <param name="json">The json.</param>
             <returns>A T.</returns>
@@ -364,7 +374,7 @@
             </summary>
         </member>
         <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllJsons``1(System.String)">
-            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
+            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)" />
             <remarks>A text file of json object lines.</remarks>
             <exception cref="T:System.IO.PathTooLongException"></exception>
             <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
@@ -374,7 +384,7 @@
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
         <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllText(System.String)">
-            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
+            <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)" />
             <exception cref="T:System.IO.PathTooLongException"></exception>
             <exception cref="T:System.IO.DirectoryNotFoundException"></exception>
             <exception cref="T:System.IO.IOException"></exception>

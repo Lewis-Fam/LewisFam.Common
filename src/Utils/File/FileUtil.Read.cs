@@ -1,4 +1,9 @@
-﻿using System;
+﻿/***
+   Copyright (C) 2021. LewisFam. All Rights Reserved.
+   Author: LewisFam
+***/
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -9,9 +14,7 @@ namespace LewisFam.Utils.File
     {
         public static class Reader
         {
-            /// <summary>
-            /// ReadFileLines
-            /// </summary>
+            /// <summary>ReadFileLines</summary>
             /// <param name="path"></param>
             /// <returns></returns>
             /// <exception cref="IOException"></exception>
