@@ -7,12 +7,24 @@ using System;
 
 namespace LewisFam.CmdLine
 {
-    public abstract class LewisFamConsole
+    public enum ConsoleColorServerity
+    {
+        Trace,
+        Info,
+        Warning,
+        Error,
+        Fatal,
+    }
+
+    public abstract class BaseLewisFamConsole
     {
         protected static string HelloWorld => "Hello World!";
 
-        protected static void PrintLine(object obj) =>
-            Console.WriteLine(obj);
+        protected static void PrintLine(object value) =>
+                    Console.WriteLine(value);
+
+        protected static void PrintLine(string value) => 
+                    Console.WriteLine(value);
 
         protected static void ResetColor()
         {

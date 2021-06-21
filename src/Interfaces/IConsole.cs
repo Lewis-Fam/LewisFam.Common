@@ -5,7 +5,7 @@
 
 namespace LewisFam.Interfaces
 {
-    public interface IConsole
+    public partial interface IConsole
     {
         /// <summary>Clear the console window from any text.</summary>
         void Clear();

@@ -3,12 +3,13 @@
    Author: LewisFam
 ***/
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace LewisFam.Extensions
-{
-    public static class IEnumerableExtension
+{   
+    public static partial class IEnumerableExtension
     {
         public enum SortDirection
         {
@@ -17,13 +18,6 @@ namespace LewisFam.Extensions
             Descending
         }
 
-        public static IEnumerable<IEnumerable<T>> Batch<T>(this IEnumerable<T> items,
-                    int maxItems)
-        {
-            return items.Select((item, inx) => new { item, inx })
-                .GroupBy(x => x.inx / maxItems)
-                .Select(g => g.Select(x => x.item));
-        }
 
         /// <summary>Orders the by.</summary>
         /// <param name="enumerable">   The enumerable.</param>
@@ -35,17 +29,15 @@ namespace LewisFam.Extensions
             return sortDirection == SortDirection.Ascending ? enumerable.OrderBy(x => GetProperty(x, property)) : enumerable.OrderByDescending(x => GetProperty(x, property));
         }
 
+        /// <summary>
+        /// Gets the property.
+        /// </summary>
+        /// <param name="o">The object.</param>
+        /// <param name="propertyName">The property name.</param>
+        /// <returns>An object property.</returns>
         private static object GetProperty(object o, string propertyName)
         {
             return o.GetType().GetProperty(propertyName)?.GetValue(o, null);
         }
-    }
-
-    //public class SortOrder
-    //{
-    //    public SortOrder(string propName, IEnumerableExtension.SortDirection sortDirection = IEnumerableExtension.SortDirection.Ascending)
-    //    {
-    //        propName = propName;
-    //    }
-    //}
+    }   
 }

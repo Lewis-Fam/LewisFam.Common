@@ -5,8 +5,14 @@
 
 namespace LewisFam.Interfaces
 {
-    public interface IMetaData<out TEntity> where TEntity : new()
+    /// <summary>
+    /// The meta data.
+    /// </summary>
+    public partial interface IMetaData<out TEntity> where TEntity : new()
     {
+        /// <summary>
+        /// Gets the data.
+        /// </summary>
         TEntity[] Data { get; }
     }
 }

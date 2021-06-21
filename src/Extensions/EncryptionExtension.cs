@@ -10,6 +10,9 @@ using System.Text;
 
 namespace LewisFam.Extensions
 {
+    /// <summary>
+    /// The encryption extension.
+    /// </summary>
     public static class EncryptionExtension
     {
         /// <summary>Decrypts</summary>
@@ -110,13 +113,6 @@ namespace LewisFam.Extensions
                     }
                 }
             }
-        }
-
-        //void Test()
-        //{
-        //    //var r = "";
-        //    //var rr =
-
-        //}
+        }                      
     }
 }

@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 using Newtonsoft.Json;
@@ -94,6 +95,11 @@ namespace LewisFam.Http
                 Debug.Assert(_client.DefaultRequestHeaders != null, "_client.DefaultRequestHeaders != null");
                 _client.DefaultRequestHeaders.Add(_headers[i].Key, _headers[i].Value);
             }
+        }
+
+        public void AddTokenHeader(string token)
+        {
+            //_client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue();
         }
     }
 }
