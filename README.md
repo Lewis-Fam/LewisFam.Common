@@ -8,7 +8,7 @@ dotnet add package LewisFam.Common --version 1.1.0
 ~~~
 
 ~~~sh
-Install-Package LewisFam.Common
+Install-Package LewisFam.Common -Version 1.1.0
 ~~~
 
 ## Features
