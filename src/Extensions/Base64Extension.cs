@@ -1,6 +1,6 @@
 ﻿/***
    Copyright (C) 2021. LewisFam. All Rights Reserved.
-   Author: LewisFam
+   Version: 1.1.1
 ***/
 
 using System.Text;
