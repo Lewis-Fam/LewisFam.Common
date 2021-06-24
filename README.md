@@ -7,6 +7,10 @@ A free and open source C# common library.
 dotnet add package LewisFam.Common --version 1.1.0
 ~~~
 
+~~~sh
+Install-Package LewisFam.Common
+~~~
+
 ## Features
 - Various common utilities, helpers and extension methods.
 -- Encryption & Decryption
