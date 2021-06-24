@@ -7,9 +7,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>2021, utilities, utils, helper, helpers, common, shared, extension, api, json, newtonsoft.json, c#, csharp, free, MIT, lewisfam, lewisfam.network</PackageTags>
     <PackageLicenseFile>License.md</PackageLicenseFile>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <Version>1.1.0</Version>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <Version>1.1.1</Version>
     <Authors>LewisFam</Authors>
     <Description>A simple C# common library. Free and open source.</Description>
     <RepositoryUrl>https://github.com/Lewis-Fam/LewisFam.Common</RepositoryUrl>

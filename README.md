@@ -4,11 +4,11 @@ A free and open source C# common library.
 
 ## Installation
 ~~~sh
-dotnet add package LewisFam.Common --version 1.1.0
+dotnet add package LewisFam.Common --version 1.1.1
 ~~~
 
 ~~~sh
-Install-Package LewisFam.Common -Version 1.1.0
+Install-Package LewisFam.Common -Version 1.1.1
 ~~~
 
 ## Features
