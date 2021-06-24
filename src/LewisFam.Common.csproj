@@ -29,6 +29,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="Utils\File\FileUtil.Stream.cs" />
   </ItemGroup>
 
    <ItemGroup>
@@ -37,5 +38,9 @@
 
    <ItemGroup>
      <Compile Update="Data\DataTable.cs" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <Folder Include="Assets\" />
    </ItemGroup>
 </Project>

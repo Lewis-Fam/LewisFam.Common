@@ -6,7 +6,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LewisFam.Utils.Json
+namespace LewisFam.Utils
 {
     ///<inheritdoc cref="JsonUtil"/>
     public static partial class JsonUtil

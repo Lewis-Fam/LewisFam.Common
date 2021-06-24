@@ -9,9 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-using LewisFam.Utils.Json;
-
-namespace LewisFam.Utils.File
+namespace LewisFam.Utils
 {
     public static partial class FileUtil
     {

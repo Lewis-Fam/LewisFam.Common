@@ -4,18 +4,17 @@
 ***/
 
 using System.Globalization;
-
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
-namespace LewisFam.Utils.Json
+namespace LewisFam.Utils
 {
     ///<inheritdoc cref="JsonUtil"/>
     public static partial class JsonUtil
     {
         /// <summary>The serializer settings.</summary>
-        private static class SerializerSettings
+        public static class SerializerSettings
         {
             public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
             {

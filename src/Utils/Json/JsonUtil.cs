@@ -6,10 +6,9 @@
 using System;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-
 using Newtonsoft.Json;
 
-namespace LewisFam.Utils.Json
+namespace LewisFam.Utils
 {
     /// <summary>A Newtonsoft.Json helper utility.</summary>
     public static partial class JsonUtil

@@ -100,14 +100,10 @@
             <param name="line">Text to be output</param>
         </member>
         <member name="T:LewisFam.Interfaces.IMetaData`1">
-            <summary>
-            The meta data.
-            </summary>
+            <summary>The meta data.</summary>
         </member>
         <member name="P:LewisFam.Interfaces.IMetaData`1.Data">
-            <summary>
-            Gets the data.
-            </summary>
+            <summary>Gets the data.</summary>
         </member>
         <member name="T:LewisFam.Interfaces.IUtilities">
             <summary>
@@ -235,10 +231,10 @@
         <member name="P:LewisFam.Operations.Response.Response`1.MetaData">
             <summary>Meta Data</summary>
         </member>
-        <member name="M:LewisFam.Utils.File.FileUtil.ReadAllLinesAsync(System.String)">
+        <member name="M:LewisFam.Utils.FileUtil.ReadAllLinesAsync(System.String)">
             <inheritdoc cref="M:System.IO.StreamReader.ReadLineAsync"/>
         </member>
-        <member name="M:LewisFam.Utils.File.FileUtil.Reader.ReadFileLines(System.String)">
+        <member name="M:LewisFam.Utils.FileUtil.Reader.ReadFileLines(System.String)">
             <summary>ReadFileLines</summary>
             <param name="path"></param>
             <returns></returns>
@@ -247,64 +243,64 @@
             <exception cref="T:System.UnauthorizedAccessException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
-        <member name="T:LewisFam.Utils.Json.JsonUtil">
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+        <member name="T:LewisFam.Utils.JsonUtil">
+            <inheritdoc cref="T:LewisFam.Utils.JsonUtil"/>
+            <inheritdoc cref="T:LewisFam.Utils.JsonUtil"/>
             <summary>A Newtonsoft.Json helper utility.</summary>
-            <inheritdoc cref="T:LewisFam.Utils.Json.JsonUtil"/>
+            <inheritdoc cref="T:LewisFam.Utils.JsonUtil"/>
         </member>
-        <member name="T:LewisFam.Utils.Json.JsonUtil.SerializerSettings">
+        <member name="T:LewisFam.Utils.JsonUtil.SerializerSettings">
             <summary>The serializer settings.</summary>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObjectAsync``1(System.String)">
+        <member name="M:LewisFam.Utils.JsonUtil.DeserializeObjectAsync``1(System.String)">
             <summary>Deserializes the object async.</summary>
             <param name="json">The json string.</param>
             <returns>T</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.FromJsonAsync``1(System.String)">
+        <member name="M:LewisFam.Utils.JsonUtil.FromJsonAsync``1(System.String)">
             <summary>Deserializes the object async.</summary>
             <param name="json">The json string.</param>
             <returns>A Task.</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.SerializeObjectToJsonAsync(System.Object,System.Boolean)">
+        <member name="M:LewisFam.Utils.JsonUtil.SerializeObjectToJsonAsync(System.Object,System.Boolean)">
             <summary>Serializes the object Async.</summary>
             <param name="value"> The value.</param>
             <param name="format">If true, format.</param>
             <returns>A string.</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.ToJsonAsync(System.Object,System.Boolean)">
+        <member name="M:LewisFam.Utils.JsonUtil.ToJsonAsync(System.Object,System.Boolean)">
             <summary>To JSON</summary>
             <param name="value"> The value.</param>
             <param name="format">If true, format.</param>
             <returns>A json string.</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.Object)">
-            <summary>Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/></summary>
+        <member name="M:LewisFam.Utils.JsonUtil.DeserializeObject``1(System.Object)">
+            <summary>Deserializes the object. <seealso cref="F:LewisFam.Utils.JsonUtil.SerializerSettings.Settings"/></summary>
             <typeparam name="T"></typeparam>
             <param name="jsonObj"></param>
             <returns></returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.DeserializeObject``1(System.String)">
-            <summary>Deserializes the object. <seealso cref="F:LewisFam.Utils.Json.JsonUtil.SerializerSettings.Settings"/></summary>
+        <member name="M:LewisFam.Utils.JsonUtil.DeserializeObject``1(System.String)">
+            <summary>Deserializes the object. <seealso cref="F:LewisFam.Utils.JsonUtil.SerializerSettings.Settings"/></summary>
             <param name="json">The json.</param>
             <returns>A T.</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.SerializeObjectToJson(System.Object,System.Boolean)">
+        <member name="M:LewisFam.Utils.JsonUtil.SerializeObjectToJson(System.Object,System.Boolean)">
             <summary>Serializes the object.</summary>
             <param name="value"> The value.</param>
             <param name="format">If true, format.</param>
             <returns>A string.</returns>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.ToJson(System.Object,System.Boolean)">
+        <member name="M:LewisFam.Utils.JsonUtil.ToJson(System.Object,System.Boolean)">
             <summary>To json.</summary>
             <param name="value"> The value.</param>
             <param name="format">If true, format.</param>
             <returns>A string.</returns>
         </member>
-        <member name="T:LewisFam.Utils.Json.JsonUtil.FileUtil">
+        <member name="T:LewisFam.Utils.JsonUtil.FileUtil">
             <summary>A Json file helper utility.</summary>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllJsonLines``1(System.String)">
+        <member name="M:LewisFam.Utils.JsonUtil.FileUtil.ReadAllJsonLines``1(System.String)">
             <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
             <remarks>A text file of json object lines.</remarks>
             <exception cref="T:System.IO.PathTooLongException"></exception>
@@ -314,7 +310,7 @@
             <exception cref="T:System.IO.FileNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
-        <member name="M:LewisFam.Utils.Json.JsonUtil.FileUtil.ReadAllText(System.String)">
+        <member name="M:LewisFam.Utils.JsonUtil.FileUtil.ReadAllText(System.String)">
             <inheritdoc cref="M:System.IO.File.ReadAllLines(System.String)"/>
             <exception cref="T:System.IO.PathTooLongException"></exception>
             <exception cref="T:System.IO.DirectoryNotFoundException"></exception>

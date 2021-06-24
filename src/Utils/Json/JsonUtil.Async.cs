@@ -5,10 +5,9 @@
 
 using System;
 using System.Threading.Tasks;
-
 using Newtonsoft.Json;
 
-namespace LewisFam.Utils.Json
+namespace LewisFam.Utils
 {
     ///<inheritdoc cref="JsonUtil"/>
     public static partial class JsonUtil

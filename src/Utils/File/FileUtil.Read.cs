@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace LewisFam.Utils.File
+namespace LewisFam.Utils
 {
     public static partial class FileUtil
     {

@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace LewisFam.Utils.File
+namespace LewisFam.Utils
 {
     public static partial class FileUtil
     {

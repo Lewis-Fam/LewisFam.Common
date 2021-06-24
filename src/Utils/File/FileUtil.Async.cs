@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace LewisFam.Utils.File
+namespace LewisFam.Utils
 {
     public static partial class FileUtil
     {

@@ -5,14 +5,29 @@
 
 namespace LewisFam.Interfaces
 {
-    /// <summary>
-    /// The meta data.
-    /// </summary>
+    public interface IDescriptable : INameable
+    {
+        string Description { get; set; }
+
+        string Name { get; set; }
+    }
+
+    public interface IMessage
+    {
+        bool HasMessage { get; }
+
+        string Message { get; }
+    }
+
+    /// <summary>The meta data.</summary>
     public partial interface IMetaData<out TEntity> where TEntity : new()
     {
-        /// <summary>
-        /// Gets the data.
-        /// </summary>
+        /// <summary>Gets the data.</summary>
         TEntity[] Data { get; }
+    }
+
+    public interface INameable
+    {
+        string Name { get; }
     }
 }

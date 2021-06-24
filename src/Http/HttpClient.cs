@@ -82,9 +82,7 @@ namespace LewisFam.Http
             base.Dispose(disposing);
             if (disposing)
             {
-                _client?.Dispose();
-
-                //Dispose();
+                _client?.Dispose();    
             }
         }
 
