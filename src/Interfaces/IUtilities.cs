@@ -8,7 +8,7 @@ namespace LewisFam.Interfaces
     ///<summary>
     /// Exposed utilities
     ///</summary>
-    public partial interface IUtilities
+    public interface IUtilities
     {
     }
 }

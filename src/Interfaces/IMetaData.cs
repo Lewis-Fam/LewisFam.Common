@@ -5,7 +5,7 @@
 
 namespace LewisFam.Interfaces
 {
-    public interface IDescriptable : INameable
+    public interface IDescribable : INameable
     {
         string Description { get; set; }
 
@@ -20,7 +20,7 @@ namespace LewisFam.Interfaces
     }
 
     /// <summary>The meta data.</summary>
-    public partial interface IMetaData<out TEntity> where TEntity : new()
+    public interface IMetaData<out TEntity> where TEntity : new()
     {
         /// <summary>Gets the data.</summary>
         TEntity[] Data { get; }

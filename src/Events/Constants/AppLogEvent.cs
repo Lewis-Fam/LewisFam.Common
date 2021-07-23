@@ -5,7 +5,7 @@
 
 namespace LewisFam.Events.Constants
 {
-    public static partial class AppLogEvent
+    public static class AppLogEvent
     {
         public const int Create = 1000;
 

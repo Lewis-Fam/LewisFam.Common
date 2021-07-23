@@ -7,7 +7,7 @@ using System;
 
 namespace LewisFam.Interfaces
 {
-    public partial interface IDataService : IDisposable
+    public interface IDataService : IDisposable
     {
     }
 }

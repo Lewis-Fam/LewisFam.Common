@@ -5,7 +5,7 @@
 
 namespace LewisFam.Interfaces
 {
-    public partial interface IResult
+    public interface IResult
     {
     }
 }

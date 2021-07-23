@@ -5,17 +5,21 @@
 
 namespace LewisFam.Interfaces
 {
-    public partial interface IRequest<out TResponse>
+    public interface IRequest<out TResponse>
     {
         public IResponse<TResponse> Response { get; }
     }
 
-    public partial interface IResponse : IResult
+    public interface IResponse : IResult
     {
     }
 
-    public partial interface IResponse<out T> : IResponse
+    public interface IResponse<out T> : IResponse
     {
         //T[] MetaData { get; }
+        /// <summary>
+        /// The result.
+        /// </summary>
+        T Result { get; }
     }
 }
