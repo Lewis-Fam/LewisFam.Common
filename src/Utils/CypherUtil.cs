@@ -1,20 +1,12 @@
-﻿/***
-   Copyright (C) 2021. LewisFam. All Rights Reserved.
-   Version: 1.1.1
-***/
-
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace LewisFam.Extensions
+namespace LewisFam.Utils
 {
-    /// <summary>
-    /// The encryption extension.
-    /// </summary>
-    [Obsolete("Removing this class in future release. Replaced by LewisFam.Util.CypherUtil")]
-    public static class EncryptionExtension
+    public static class CypherUtil
     {
         /// <summary>Decrypts</summary>
         /// <param name="encryptedText">The encrypted text.</param>
