@@ -54,6 +54,8 @@ namespace LewisFam.Operations.Response
         {
         }
 
+        public T Result { get; }
+
         /// <summary>Initializes a new instance of the <see cref="Response{T}"/> class.</summary>
         /// <param name="id">The identifier.</param>
         protected Response(Guid id) : base(id)

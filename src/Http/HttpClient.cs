@@ -97,7 +97,7 @@ namespace LewisFam.Http
 
         public void AddTokenHeader(string token)
         {
-            //_client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue();
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(token);
         }
     }
 }

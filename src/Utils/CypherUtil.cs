@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace LewisFam.Utils
 {
+
     public static class CypherUtil
     {
         /// <summary>Decrypts</summary>

@@ -105,6 +105,11 @@
         <member name="P:LewisFam.Interfaces.IMetaData`1.Data">
             <summary>Gets the data.</summary>
         </member>
+        <member name="P:LewisFam.Interfaces.IResponse`1.Result">
+            <summary>
+            The result.
+            </summary>
+        </member>
         <member name="T:LewisFam.Interfaces.IUtilities">
             <summary>
              Exposed utilities
@@ -230,6 +235,24 @@
         </member>
         <member name="P:LewisFam.Operations.Response.Response`1.MetaData">
             <summary>Meta Data</summary>
+        </member>
+        <member name="M:LewisFam.Utils.CypherUtil.Decrypt(System.String,System.String)">
+            <summary>Decrypts</summary>
+            <param name="encryptedText">The encrypted text.</param>
+            <param name="key">          The key.</param>
+            <returns>A string.</returns>
+            <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
+        </member>
+        <member name="M:LewisFam.Utils.CypherUtil.Encrypt(System.String,System.String)">
+            <summary>Encrypts the.</summary>
+            <param name="text">The text.</param>
+            <param name="key"> The key.</param>
+            <returns>A string.</returns>
+            <exception cref="T:System.RankException">Ignore.</exception>
+            <exception cref="T:System.ArrayTypeMismatchException">Ignore.</exception>
+            <exception cref="T:System.InvalidCastException">Ignore.</exception>
+            <exception cref="T:System.ObjectDisposedException">Ignore.</exception>
+            <exception cref="T:System.IO.IOException">Ignore.</exception>
         </member>
         <member name="M:LewisFam.Utils.FileUtil.ReadAllLinesAsync(System.String)">
             <inheritdoc cref="M:System.IO.StreamReader.ReadLineAsync"/>
