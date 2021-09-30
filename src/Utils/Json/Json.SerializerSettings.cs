@@ -14,7 +14,7 @@ namespace LewisFam.Utils
     public static partial class JsonUtil
     {
         /// <summary>The serializer settings.</summary>
-        public static class SerializerSettings
+        static class SerializerSettings
         {
             public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
             {

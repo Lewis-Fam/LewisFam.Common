@@ -35,7 +35,7 @@ namespace LewisFam.Utils
         /// <returns></returns>
         public static T DeserializeObject<T>(this object jsonObj) where T : new()
         {
-            var json = jsonObj.ToJson();
+            var json = jsonObj.SerializeObjectToJson();
             return json.DeserializeObject<T>();
         }
 

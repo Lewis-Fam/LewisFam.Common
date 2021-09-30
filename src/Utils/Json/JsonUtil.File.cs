@@ -11,6 +11,7 @@ namespace LewisFam.Utils
     ///<inheritdoc cref="JsonUtil"/>
     public static partial class JsonUtil
     {
+
         /// <summary>A Json file helper utility.</summary>
         public static class FileUtil
         {
