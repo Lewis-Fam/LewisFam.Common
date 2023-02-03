@@ -5,7 +5,6 @@ using System.Text;
 
 namespace LewisFam.Utils
 {
-
     public static class CypherUtil
     {
         /// <summary>Decrypts</summary>

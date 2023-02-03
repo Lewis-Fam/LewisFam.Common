@@ -33,9 +33,10 @@ namespace LewisFam.Utils
                 {
                     DateTimeStyles = DateTimeStyles.AssumeUniversal
                 },
-
-                //new JsonUtil.ParseStringConverter(),
-                new StringEnumConverter(),
+                new StringEnumConverter
+                {
+                    //NamingStrategy = new CamelCaseNamingStrategy() { OverrideSpecifiedNames = false }
+                },
             },
             };
         }

@@ -9,7 +9,7 @@ using System.Diagnostics;
 namespace LewisFam
 {
     /// <summary>The LewisFamObject base class.</summary>
-    public abstract class LewisFamObject : ILewisFamObject
+    public abstract partial class LewisFamObject : ILewisFamObject
     {
         #region Constructors
 
